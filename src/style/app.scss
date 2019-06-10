@@ -1,0 +1,130 @@
+@import "variables";
+
+@import "./../components/Header/styles";
+@import "./../components/Footer/styles";
+@import "./../components/Button/styles";
+@import "./../components/MessageBox/styles";
+
+@import "./../containers/Toastr/styles";
+@import "./../containers/Timeline/styles";
+@import "./../containers/Profile/styles";
+
+body {
+  margin: 0;
+  font-family: $font-family-base;
+}
+
+.app {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: $body-bg;
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 100%;
+    right: 0;
+    z-index: -1;
+  }
+
+  &__container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .shell {
+    height: 80%;
+    max-height: 630px;
+    background: $shell-bg;
+    box-shadow: inset 0 0 2px 0px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    width: $shell-width;
+    justify-content: space-between;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+
+    @media only screen and (max-width: 640px) {
+      height: 100%;
+      box-shadow: none;
+      flex: 1;
+      max-height: none;
+    }
+
+    &__content {
+      padding: $base-px-value * 2;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      overflow: auto;
+
+      &__title {
+        font-size: 14px;
+        margin: 0 0 8px;
+      }
+
+      &__table {
+        flex: 1;
+        .row {
+          display: flex;
+          margin-bottom: 4px;
+          box-shadow: 0 11px 10px -10px rgba(0, 0, 0, 0.2);
+          .col {
+            flex: 1;
+            padding: 12px;
+            background: #ffffff;
+            display: flex;
+            align-items: center;
+            &:first-child {
+              margin-right: 2px;
+            }
+            
+            &__img {
+              width: 20px;
+              margin-right: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.loader {
+  color: transparent;
+  position: relative;
+  &:after {
+    content: '';
+    margin-top: -8px;
+    margin-left: -8px;
+    position: absolute;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    border: 2px solid $brand-primary;
+    border-top-color: rgba(0, 0, 0, 0) !important;
+    border-left-color: rgba(0, 0, 0, 0) !important;
+    width: 16px;
+    background: none !important;
+    height: 16px;
+    border-radius: 50%;
+    animation: loadingSpinner 0.6s infinite linear;
+    -webkit-animation: loadingSpinner 0.6s infinite linear;
+  }
+}
+
+ @keyframes loadingSpinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,46 @@
+.shell__header {
+    background: #ffffff;
+    padding: $base-px-value * 2;
+    position: relative;
+    box-shadow: 0 11px 10px -10px rgba(0,0,0,0.3);
+    color: $header-text-color;
+
+    &__actions__wrapper {
+        display: flex;
+        align-items: center;
+
+        .react-datepicker-popper {
+            transform: translate3d(40px, 45px, 0px) !important;
+        }
+        .react-datepicker__triangle {
+            display: none;
+        }
+
+        .react-datepicker__header {
+            background: $brand-primary;
+            .react-datepicker__day-name,
+            .react-datepicker__current-month,
+            .react-datepicker-time__header,
+            .react-datepicker-year-header {
+                color: #ffffff;
+            }
+        }
+
+        .react-datepicker-wrapper {
+            .react-datepicker__input-container {
+                padding: 0 8px;
+                input {
+                    border: none;
+                    padding: 8px 16px;
+                    border-radius: 4px;
+                    width: 100%;
+                    box-sizing: border-box;
+                    background: #f3f0f0;
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+        }
+    }
+}

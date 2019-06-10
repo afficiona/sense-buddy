@@ -1,0 +1,19 @@
+.shell__footer {
+    background: #ffffff;
+    height: 50px;
+    position: relative;
+    box-shadow: 0 -7px 10px -10px rgba(0, 0, 0, 0.6);
+    color: $header-text-color;
+    display: flex;
+
+    &__actions__wrapper {
+        align-items: stretch;
+        flex: 1;
+        height: 100%;
+        justify-content: stretch;
+        display: flex;
+        .btn {
+            flex: 1
+        }
+    }
+}
