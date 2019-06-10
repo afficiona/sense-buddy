@@ -1,8 +1,8 @@
 {
-  "name": "sense-buddy-client",
+  "name": "sense-buddy",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://afficiona21.github.io/sense-buddy-client",
+  "homepage": "https://afficiona21.github.io/sense-buddy",
   "dependencies": {
     "axios": "^0.19.0",
     "classnames": "2.2.5",
