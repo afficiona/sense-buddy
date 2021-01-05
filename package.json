@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://afficiona21.github.io/sense-buddy",
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "classnames": "2.2.5",
     "connected-react-router": "^6.4.0",
     "history": "^4.9.0",
